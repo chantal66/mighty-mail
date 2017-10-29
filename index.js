@@ -27,7 +27,7 @@ require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
 // heroku routes
-if (process.env.npNODE_ENV == 'production') {
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 
   const path = require('path');
