@@ -7,15 +7,14 @@ class Mailer extends helper.Mail {
     super();
 
     // sendgrid specific setup
+    this.sgApi = sendgrid(keys.sendGridKey);
     this.from_email = new helper.Email('no-reply@mightymail.com');
     this.subject = subject;
     this.body = new helper.Content('text/html', content);
     this.recipients = this.formatAddresses(recipients); //specifies that im sending emails to multiple people
 
     this.addContent(this.body);
-
-    // enabling click tracking
-    this.addClickTracking();
+    this.addClickTracking(); // enabling click tracking
     this.addRecipients();
   }
 
@@ -32,6 +31,27 @@ class Mailer extends helper.Mail {
 
     trackingSettings.setClickTracking(clickTracking);
     this.addTrackingSettings(trackingSettings);
+  }
+
+  addRecipients() {
+    const personalize = new helper.Personalization();
+
+    this.recipients.forEach(recipient => {
+      personalize.addTo(recipient);
+    });
+    this.addPersonalization(personalize);
+  }
+
+  // comunicating with sendgrid
+  async send() {
+    const request = this.sgApi.emptyRequest({
+      method: 'POST',
+      path: '/v3/mail/send',
+      body: this.toJSON()
+    });
+
+    const response = this.sgApi.API(request);
+    return response;
   }
 }
 
