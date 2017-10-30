@@ -11,7 +11,10 @@ module.exports = app => {
     const survey = new Survey({
       title,
       subject,
-      body
+      body,
+      recipients: recipients.split(',').map(email => {
+        return { email: email };
+      })
     });
   });
 };
