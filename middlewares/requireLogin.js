@@ -6,4 +6,4 @@ module.exports = (req, res, next) => {
   next();
 };
 
-// 401 code is Unauthorized. meaning user have to log in.
+// 401 code is Unauthorized. meaning user has to log in.
