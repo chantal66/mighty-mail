@@ -1,5 +1,6 @@
 // surveyFormReview show users their form inputs for review.
 import React from 'react';
+import { connect } from 'react-redux';
 
 const SurveyFormReview = ({ onCancel }) => {
   return (
@@ -12,4 +13,4 @@ const SurveyFormReview = ({ onCancel }) => {
   );
 };
 
-export default SurveyFormReview;
+export default connect()(SurveyFormReview);
