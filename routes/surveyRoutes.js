@@ -15,18 +15,24 @@ module.exports = app => {
   });
 
   app.post('/api/surveys/webhooks', (req, res) => {
-    const events = _.map(req.body, ({ email, url }) => {
-      const pathname = new URL(url).pathname; // extracting /api/surveys/:survey_id/yes or no
-      const parser = new Path('/api/surveys/:survey_id/:choice'); // parser will return :survey_id and :choice otherwise it'll be null
-      const match = p.test(pathname);
-      if (match) {
-        return {
-          email,
-          survey_id: match.survey_id,
-          choice: match.choice
-        };
-      }
-    });
+    const parser = new Path('/api/surveys/:survey_id/:choice'); // parser will return :survey_id and :choice otherwise it'll be null
+
+    const events = _.chain(req.body)
+      .map(({ email, url }) => {
+        const match = parser.test(new URL(url).pathname);
+        if (match) {
+          return {
+            email,
+            survey_id: match.survey_id,
+            choice: match.choice
+          };
+        }
+      })
+      .compact()
+      .uniqBy('email', 'survey_id')
+      .value();
+    res.send({});
+    console.log(events);
   });
 
   app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
