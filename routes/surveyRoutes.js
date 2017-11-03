@@ -15,13 +15,13 @@ module.exports = app => {
   });
 
   app.post('/api/surveys/webhooks', (req, res) => {
-    const events = _.map(req.body, event => {
-      const pathname = new URL(event.url).pathname; // extracting /api/surveys/:survey_id/yes or no
+    const events = _.map(req.body, ({ email, url }) => {
+      const pathname = new URL(url).pathname; // extracting /api/surveys/:survey_id/yes or no
       const parser = new Path('/api/surveys/:survey_id/:choice'); // parser will return :survey_id and :choice otherwise it'll be null
       const match = p.test(pathname);
       if (match) {
         return {
-          email: event.email,
+          email,
           survey_id: match.survey_id,
           choice: match.choice
         };
