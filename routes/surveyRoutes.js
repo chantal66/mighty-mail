@@ -17,7 +17,7 @@ module.exports = app => {
   app.post('/api/surveys/webhooks', (req, res) => {
     const parser = new Path('/api/surveys/:survey_id/:choice'); // parser will return :survey_id and :choice otherwise it'll be null
 
-    const events = _.chain(req.body)
+    _.chain(req.body)
       .map(({ email, url }) => {
         const match = parser.test(new URL(url).pathname);
         if (match) {
@@ -30,9 +30,21 @@ module.exports = app => {
       })
       .compact()
       .uniqBy('email', 'survey_id')
+      .each(({ survey_id, email, choice }) => {
+        // quering in mongo
+        Survey.updateOne(
+          {
+            _id: survey_id,
+            recipients: { $elemMatch: { email: email, responded: false } }
+          },
+          {
+            $inc: { [choice]: 1 }, // inc is mongo operator that helps increment by 1
+            $set: { 'recipients.$.responded': true }
+          }
+        ).exec();
+      })
       .value();
     res.send({});
-    console.log(events);
   });
 
   app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
