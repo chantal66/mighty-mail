@@ -36,7 +36,7 @@ class Header extends Component {
             to={this.props.auth ? '/surveys' : '/'}
             className="left brand-logo"
             style={{
-              paddingLeft: '10px'
+              paddingLeft: '15px'
             }}
           >
             Mighty Mail
