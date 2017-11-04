@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
+import logo from './images/logo.png';
+
 class Header extends Component {
   renderContent() {
     switch (this.props.auth) {
@@ -36,7 +38,9 @@ class Header extends Component {
             to={this.props.auth ? '/surveys' : '/'}
             className="left brand-logo"
             style={{
-              paddingLeft: '15px'
+              paddingLeft: '60px',
+              fontFamily: 'Murmers'
+              
             }}
           >
             Mighty Mail

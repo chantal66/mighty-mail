@@ -10,7 +10,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
     return (
       <div key={name}>
-        <label>{label}</label>
+        <label style={{ fontSize: '15px' }}>{label}</label>
         <div>{formValues[name]}</div>
       </div>
     );
