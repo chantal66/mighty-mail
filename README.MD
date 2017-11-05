@@ -8,6 +8,7 @@
 
 > You can take a look at some of the diagrams that helped me achieve this capstone. [capstone](/Diagrams)
 
+
 ![Alt text](/Diagrams/Mighty-mail-readme.png?raw=true 'Mighty Mail')
 
 
