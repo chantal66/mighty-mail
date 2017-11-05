@@ -5,6 +5,10 @@
 > A simple and easy way to gather valuable feedback that you can use to help improve your business.
 
 > you can see the live version here [Mighty Mail](https://blooming-atoll-29030.herokuapp.com/)
+
+
+![Alt text](/Diagrams/Mighty-mail-readme.png?raw=true 'Mighty Mail')
+
 ## Setup
 
 Clone the repo in your terminal:
@@ -25,7 +29,7 @@ Install dependencies from root:
 $ npm install
 ```
 
-then for the client side:
+Then install the client side:
 
 ```
 cd client
@@ -35,7 +39,7 @@ cd client
 npm install
 ```
 
-to run the app:
+To run the app:
 
 ```
 npm run dev
@@ -46,15 +50,15 @@ no need to build static files, everytime we push to heroku there's a script to h
 
 ## Features
 - Users can login with their Google Account.
-- User can by credits via Stripe checkout.
+- User can buy credits via Stripe checkout.
 - Users can create campaigns to gather feedback from their clients.
-- Surveys can be send with a bulk list of emails separated with a comma.
+- Surveys can be sent with a bulk list of emails separated with a comma.
 - Users can see the results of their campaigns on the Dashboard.
 - After users click submit the remaining credits are shown on navbar.
 
 ## Stack
 
-React, Redux, Redux Forms, Express, Stripe, Passport, MongoDB and Sendgrid. 
+React, Redux, Redux Forms, Express, Stripe, Passport, MongoDB and Sendgrid.
 
 ## Author
 
