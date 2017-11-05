@@ -25,6 +25,7 @@ class SurveyForm extends Component {
   render() {
     return (
       <div style={{ paddingTop: '20px' }}>
+        <h4 style={{ color: '#787474' }}>Create Your Survey</h4>
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}
           <Link to="/surveys" className="red btn-flat white-text">

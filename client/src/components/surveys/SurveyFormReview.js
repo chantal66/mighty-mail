@@ -18,7 +18,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
 
   return (
     <div>
-      <h5>Please confirm your entries</h5>
+      <h5 style={{ color: '#787474' }}>Please confirm your entries</h5>
       {reviewFields}
       <button
         className="yellow darken-3 white-text btn-flat"
@@ -27,7 +27,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
         Back
       </button>
       <button
-        onClick={() => submitSurvey(formValues, history)} // arrow func allows for submitSurvey to wait until button is clicked
+        onClick={() => submitSurvey(formValues, history)}
         className="green btn-flat right white-text"
       >
         Send Survey
