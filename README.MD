@@ -4,10 +4,13 @@
 
 > A simple and easy way to gather valuable feedback that you can use to help improve your business.
 
-> you can see the live version here [Mighty Mail](https://blooming-atoll-29030.herokuapp.com/)
+> You can see the live version here [Mighty Mail](https://blooming-atoll-29030.herokuapp.com/)
+
+> You can take a look at some of the diagrams that helped me achieve this capstone. [capstone](/Diagrams)
 
 
 ![Alt text](/Diagrams/Mighty-mail-readme.png?raw=true 'Mighty Mail')
+
 
 ## Setup
 
