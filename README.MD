@@ -2,6 +2,7 @@
 
 ## Intro
 
+> A simple and easy way to gather valuable feedback that you can use to help improve your business.
 
 ## Setup
 
@@ -15,10 +16,10 @@ Navigate to the project with:
 ```
 cd mighty-mail
 ```
-> Note for this project to run properly you need to install dependencies on the 
+> Note for this project to run properly you need to install the dependencies on the
 server and client side.
 
-Install dependencies:
+Install dependencies from root:
 ```
 $ npm install
 ```
@@ -43,11 +44,17 @@ no need to build static files, everytime we push to heroku there's a script to h
 
 
 ## Features
-
+- Users can login with their Google Account.
+- User can by credits via Stripe checkout.
+- Users can create campaigns to gather feedback from their clients.
+- Surveys can be send with a bulk list of emails separated with a comma.
+- Users can see the results of their campaigns on the Dashboard.
+- After users click submit the remaining credits are shown on navbar.
 
 ## Stack
 
-React, Redux, Redux Forms, Express, Stripe, Passport
+React, Redux, Redux Forms, Express, Stripe, Passport, MongoDB and Sendgrid. 
+
 ## Author
 
 [Chantal Justamond](https://github.com/chantal66)
