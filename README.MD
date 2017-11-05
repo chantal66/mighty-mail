@@ -4,6 +4,9 @@
 
 > A simple and easy way to gather valuable feedback that you can use to help improve your business.
 
+> you can see the live version here [Mighty Mail](https://blooming-atoll-29030.herokuapp.com/)
+
+![Alt text](/Diagrams/Mighty-mail-readme.png)
 ## Setup
 
 Clone the repo in your terminal:
@@ -24,7 +27,7 @@ Install dependencies from root:
 $ npm install
 ```
 
-then for the client side:
+Then for the client side:
 
 ```
 cd client
@@ -34,7 +37,7 @@ cd client
 npm install
 ```
 
-to run the app:
+To run the app:
 
 ```
 npm run dev
@@ -53,7 +56,7 @@ no need to build static files, everytime we push to heroku there's a script to h
 
 ## Stack
 
-React, Redux, Redux Forms, Express, Stripe, Passport, MongoDB and Sendgrid. 
+React, Redux, Redux Forms, Express, Stripe, Passport, MongoDB and Sendgrid.
 
 ## Author
 
