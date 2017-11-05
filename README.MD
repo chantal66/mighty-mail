@@ -6,7 +6,7 @@
 
 > you can see the live version here [Mighty Mail](https://blooming-atoll-29030.herokuapp.com/)
 
-![Alt text](/Diagrams/Mighty-mail-readme.png)
+![Alt text](/Diagrams/Mighty-mail-readme.png?raw=true 'Mighty Mail')
 ## Setup
 
 Clone the repo in your terminal:
