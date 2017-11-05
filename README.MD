@@ -27,7 +27,7 @@ Install dependencies from root:
 $ npm install
 ```
 
-Then for the client side:
+Then install the client side:
 
 ```
 cd client
@@ -48,9 +48,9 @@ no need to build static files, everytime we push to heroku there's a script to h
 
 ## Features
 - Users can login with their Google Account.
-- User can by credits via Stripe checkout.
+- User can buy credits via Stripe checkout.
 - Users can create campaigns to gather feedback from their clients.
-- Surveys can be send with a bulk list of emails separated with a comma.
+- Surveys can be sent with a bulk list of emails separated with a comma.
 - Users can see the results of their campaigns on the Dashboard.
 - After users click submit the remaining credits are shown on navbar.
 
