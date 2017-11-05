@@ -4,6 +4,7 @@
 
 > A simple and easy way to gather valuable feedback that you can use to help improve your business.
 
+> you can see the live version here [Mighty Mail](https://blooming-atoll-29030.herokuapp.com/)
 ## Setup
 
 Clone the repo in your terminal:
