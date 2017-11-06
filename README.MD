@@ -24,8 +24,23 @@ Navigate to the project with:
 ```
 cd mighty-mail
 ```
-> Note for this project to run properly you need to install the dependencies on the
-server and client side.
+> Note for this project to run properly you need to:
+>* install the dependencies on the server and client side.
+>* create a dev.js file under the config folder and setup your keys like so:
+
+```
+module.exports = {
+  googleClientID:
+  googleClientSecret:
+  mongoURI:
+  cookieKey:
+  stripePublishableKey:
+  stripeSecretKey:
+  sendGridKey:
+  redirectDomain:
+}
+* Don't forget to add a comma after each key and each key needs to be inside quotes. 
+```
 
 Install dependencies from root:
 ```
@@ -61,7 +76,7 @@ no need to build static files, everytime we push to heroku there's a script to h
 
 ## Stack
 
-React, Redux, Redux Forms, Express, Stripe, Passport, MongoDB and Sendgrid.
+React, Redux, Redux Forms, Express, Stripe, Passport JS, MongoDB and Node JS.
 
 ## Author
 
